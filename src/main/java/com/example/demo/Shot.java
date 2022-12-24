@@ -3,10 +3,11 @@ package com.example.demo;
 
 import javafx.scene.paint.Color;
 
+import static com.example.demo.SpaceInvaders.distance;
 import static com.example.demo.SpaceInvaders.gc;
 
 public class Shot {
-    public boolean to Remove;
+    public boolean toRemove;
 
     int posX, posY, speed = 10;
     static final int size = 6;
@@ -20,7 +21,7 @@ public class Shot {
         posY -=speed;
     }
 
-    public void draw(){
+    public void draw(int score){
         gc.setFill(Color.RED);
         if (score >= 50 && score <=70 || score >=120){
             gc.setFill(Color.YELLOWGREEN);
